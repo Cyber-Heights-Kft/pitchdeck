@@ -1,6 +1,17 @@
 {
   "rewrites": [
-    { "source": "/300-clients", "destination": "/src/300-clients.html" },
-    { "source": "/", "destination": "/src/index.html" }
-  ]
+    {
+      "source": "/300-clients",
+      "destination": "/src/300-clients.html"
+    },
+    {
+      "source": "/pay-per-client",
+      "destination": "/src/pay-per-client.html"
+    },
+    {
+      "source": "/",
+      "destination": "/src/index.html"
+    }
+  ],
+  "cleanUrls": true
 }
