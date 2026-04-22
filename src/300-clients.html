@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MARKTR — 300 Clients in 90 Days</title>
+<title>MARKTR — 300 Clients in 3 Months</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -902,16 +902,16 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
           <input type="range" id="das" min="50" max="200" step="10" value="50">
         </div>
         <div class="sg">
-          <div class="sg-top"><span class="sg-name">Potential Clients (90 days)</span><span class="sg-val" id="nc-val">100</span></div>
+          <div class="sg-top"><span class="sg-name">Potential Clients (3 months)</span><span class="sg-val" id="nc-val">100</span></div>
           <input type="range" id="nc" min="50" max="300" step="10" value="100">
         </div>
         <div class="clients-display">
-          <span id="clients-summary">&#10003; Minimum ad spend: $50/day &times; 90 days = $4,500<br>Potential based on your clinic&rsquo;s numbers</span>
+          <span id="clients-summary">&#10003; Minimum ad spend: $50/day &times; 3 months = $4,500<br>Potential based on your clinic&rsquo;s numbers</span>
         </div>
       </div>
       <div class="calc-results an a4">
         <div class="calc-hero">
-          <div class="calc-hero-label" id="out-hero-label">Your 90-Day Revenue</div>
+          <div class="calc-hero-label" id="out-hero-label">Your 3-Month Revenue</div>
           <div class="calc-hero-num" id="out-fv">$50,000</div>
           <div class="calc-hero-sub">based on your numbers</div>
         </div>
@@ -942,7 +942,7 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
         <div class="bar-track"><div class="bar-fill bar-ad" id="bar-invest" style="width:6%"><span id="bar-invest-v">$4,500</span></div></div>
       </div>
       <div class="bar-row">
-        <span class="bar-lbl" id="bar-rev-lbl">90-Day Revenue</span>
+        <span class="bar-lbl" id="bar-rev-lbl">3-Month Revenue</span>
         <div class="bar-track"><div class="bar-fill bar-rev" id="bar-rev" style="width:92%"><span id="bar-rev-v">$50,000</span></div></div>
       </div>
     </div>
@@ -984,18 +984,27 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
   <div class="si">
     <h2 class="an a1">Your Investment</h2>
     <div class="pricing-row an a2" style="display:flex;justify-content:center">
-      <div class="price-card pop" style="max-width:420px;width:100%">
-        <div class="pop-badge">90-Day Partnership</div>
-        <div class="price-amt" style="font-size:3.4rem">$6,000</div>
-        <p style="font-size:1rem;color:var(--tx2);margin-top:0.6rem;font-weight:400">for 90 days</p>
-        <p style="font-size:0.95rem;color:var(--tx2);margin-top:0.5rem">300 new clients, $100 intro offer</p>
-        <p style="font-size:0.88rem;color:var(--purple);font-weight:600;margin-top:0.8rem">$100/day minimum ad spend</p>
+      <div class="price-card pop" style="max-width:520px;width:100%">
+        <div class="pop-badge">3-Month Agreement</div>
+        <div style="display:flex;align-items:stretch;justify-content:center;gap:1.4rem;flex-wrap:wrap;margin-top:0.4rem">
+          <div style="flex:1;min-width:180px;text-align:center">
+            <div class="price-amt" style="font-size:2.4rem;color:var(--tx)">$17,700</div>
+            <p style="font-size:0.9rem;color:var(--tx2);margin-top:0.35rem;font-weight:400">for the 3-month agreement</p>
+          </div>
+          <div style="display:flex;align-items:center;color:var(--tx3);font-size:0.9rem;font-weight:500">— or —</div>
+          <div style="flex:1;min-width:180px;text-align:center">
+            <div class="price-amt" style="font-size:2.8rem">$6,000</div>
+            <p style="font-size:0.9rem;color:var(--purple);margin-top:0.35rem;font-weight:600">paid today</p>
+          </div>
+        </div>
+        <p style="font-size:0.95rem;color:var(--tx2);margin-top:1.1rem">300 new clients, $97 intro offer</p>
+        <p style="font-size:0.88rem;color:var(--purple);font-weight:600;margin-top:0.5rem">$100/day minimum ad spend</p>
       </div>
     </div>
     <div class="guarantee an a3">
       <div class="ic-lg" style="margin:0 auto 0.6rem"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 12 15 16 10"/></svg></div>
       <h3>Our Guarantee</h3>
-      <p>If we don&rsquo;t bring you 300 clients in 90 days, we keep working for free until we do.</p>
+      <p>If we don&rsquo;t bring you 300 clients with the $97 offer, we keep working for free until we do.</p>
     </div>
   </div>
 </section>
@@ -1106,10 +1115,11 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
     updateFill(dasSlider);
     updateFill(ncSlider);
 
-    // Base rate: $50/day produces 100 clients in 90 days
+    // Base rate: $50/day produces 100 clients in 3 months
     const clientsPerDay = (dailySpend / BASE_DAILY) * (BASE_CLIENTS / BASE_DAYS);
     const daysNeeded = Math.ceil(numClients / clientsPerDay);
     const totalAdSpend = dailySpend * daysNeeded;
+    const monthsNeeded = Math.max(1, Math.round(daysNeeded / 30));
 
     const revenue = numClients * clientValue;
     const ltvRev = numClients * LTV_AVG;
@@ -1117,11 +1127,11 @@ input[type="range"]::-moz-range-thumb { width: 22px; height: 22px; border-radius
     const roi = revenue / totalAdSpend;
 
     // Update summary
-    clientsSummary.innerHTML = 'Potential: ' + numClients + ' clients &bull; $' + fmt(dailySpend) + '/day ad spend &times; ' + daysNeeded + ' days = $' + fmt(totalAdSpend);
+    clientsSummary.innerHTML = 'Potential: ' + numClients + ' clients &bull; $' + fmt(dailySpend) + '/day ad spend &times; ' + monthsNeeded + ' month' + (monthsNeeded === 1 ? '' : 's') + ' = $' + fmt(totalAdSpend);
 
     // Update hero label
-    outHeroLabel.textContent = 'Your ' + daysNeeded + '-Day Revenue';
-    barRevLbl.textContent = daysNeeded + '-Day Revenue';
+    outHeroLabel.textContent = 'Your ' + monthsNeeded + '-Month Revenue';
+    barRevLbl.textContent = monthsNeeded + '-Month Revenue';
 
     counters.fv.target = revenue;
     counters.ltv.target = ltvRev;
